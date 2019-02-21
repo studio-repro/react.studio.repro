@@ -37,41 +37,6 @@ The build is minified and the filenames include the hashes.
 
 This project includes a multi-stage Dockerfile, to build an image you can execute: `docker build . --tag react-studio-repro:1.0`
 
-## gRPC & Protocol Buffers
-
-This project uses gRPC and Protocol Buffers.
-
-**Protoc Binary**
-
-Download and install the compiler: https://github.com/protocolbuffers/protobuf/releases
-
-```
-$ mv ~/Downloads/protoc-3.6.1-osx-x86_64 ~/Tools
-$ cd ~/Tools
-$ ln -s protoc-3.6.1-osx-x86_64 protoc
-```
-
-Add the binary to your path, e.g. `export PATH=$PATH:$HOME/Tools/protoc/bin`
-
-**gRPC Web Protoc Plugin**
-
-Use this plugin to generate the proto messages and the service client stub from .proto definitions
-
-Download and install the `protoc-gen-grpc-web` plugin: https://github.com/grpc/grpc-web/releases
-
-```
-$ sudo mv ~/Downloads/protoc-gen-grpc-web-1.0.3-darwin-x86_64 /usr/local/bin/protoc-gen-grpc-web
-$ chmod +x /usr/local/bin/protoc-gen-grpc-web
-```
-
-When you have both protoc and protoc-gen-grpc-web installed, make sure they are both executable and are discoverable from your PATH.
-
-Run the following command to generate the proto messages and the service client stub from .proto definitions:
-
-```bash
-$ ./proto-web-gen.sh
-```
-
 ## Contribution guidelines
 
-Code reviews are done via pull requests.
+Never commit directly to master, create a feature branch and submit a pull request.
