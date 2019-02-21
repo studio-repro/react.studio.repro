@@ -1,6 +1,7 @@
 import { inject, observer } from 'mobx-react';
 import * as React from 'react';
 
+import Footer from '@components/structural/Footer';
 import Head from '@components/structural/Head';
 import Header from '@components/structural/Header';
 import Page from '@components/structural/Page';
@@ -32,6 +33,7 @@ class Landing extends React.Component<LandingProps> {
 					<About />
 					<WhatWeDo />
 				</section>
+				<Footer />
 			</Page>
 		);
 	}
