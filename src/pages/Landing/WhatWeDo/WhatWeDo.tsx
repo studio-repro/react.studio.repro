@@ -10,7 +10,7 @@ export interface WhatWeDoProps {
 }
 
 class WhatWeDo extends React.Component<WhatWeDoProps> {
-	public handleLearnMoreClick = (event: React.FormEvent) => {
+	public handleGetInTouchClick = (event: React.FormEvent) => {
 		event.preventDefault();
 	};
 
@@ -35,7 +35,7 @@ class WhatWeDo extends React.Component<WhatWeDoProps> {
 					</div>
 					<div className="WhatWeDo__Button__Container">
 						<RoundButton
-							onClick={this.handleLearnMoreClick}
+							onClick={this.handleGetInTouchClick}
 							text={'get in touch'}
 							type={'primary'}
 						/>

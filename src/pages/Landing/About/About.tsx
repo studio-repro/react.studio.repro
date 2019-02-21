@@ -1,6 +1,8 @@
 import { observer } from 'mobx-react';
 import * as React from 'react';
 
+import RoundButton from '@components/ui/RoundButton';
+
 import './style.less';
 
 export interface AboutProps {
@@ -13,6 +15,10 @@ interface State {
 
 @observer
 class About extends React.Component<AboutProps, State> {
+	public handleGetInTouchClick = (event: React.FormEvent) => {
+		event.preventDefault();
+	};
+
 	public render() {
 		return (
 			<section className="About__Main">
@@ -27,6 +33,13 @@ class About extends React.Component<AboutProps, State> {
 							us, so we know how to get your titles ready to hit the press.
 						</span>
 					</p>
+					<div className="About__Button__Container">
+						<RoundButton
+							onClick={this.handleGetInTouchClick}
+							text={'get in touch'}
+							type={'primary'}
+						/>
+					</div>
 				</section>
 			</section>
 		);
