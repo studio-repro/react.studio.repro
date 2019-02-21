@@ -1,0 +1,49 @@
+import * as React from 'react';
+
+import RoundButton from '@components/ui/RoundButton';
+import RoundIcon from '@components/ui/RoundIcon';
+
+import './style.less';
+
+export interface WhatWeDoProps {
+	// Empty
+}
+
+class WhatWeDo extends React.Component<WhatWeDoProps> {
+	public handleLearnMoreClick = (event: React.FormEvent) => {
+		event.preventDefault();
+	};
+
+	public render() {
+		return (
+			<div className="WhatWeDo__Main">
+				<div className="WhatWeDo__Content">
+					<h1>What We Do</h1>
+					<div className="WhatWeDo__List">
+						<div className="WhatWeDo__Card">
+							<RoundIcon type="svg" />
+							<h4 className="WhatWeDo__Card__Title">Retouching</h4>
+						</div>
+						<div className="WhatWeDo__Card">
+							<RoundIcon type="svg" />
+							<h4 className="WhatWeDo__Card__Title">DTP</h4>
+						</div>
+						<div className="WhatWeDo__Card">
+							<RoundIcon type="svg" />
+							<h4 className="WhatWeDo__Card__Title">Scanning</h4>
+						</div>
+					</div>
+					<div className="WhatWeDo__Button__Container">
+						<RoundButton
+							onClick={this.handleLearnMoreClick}
+							text={'get in touch'}
+							type={'primary'}
+						/>
+					</div>
+				</div>
+			</div>
+		);
+	}
+}
+
+export default WhatWeDo;

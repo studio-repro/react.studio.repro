@@ -1,0 +1,101 @@
+@import '~@themes/app-theme.less';
+
+.WhatWeDo__Main {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background-color: @color-white;
+	margin-bottom: 20px;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	position: relative;
+
+	.WhatWeDo__Content {
+		width: 100%;
+		max-width: 1230px;
+		justify-content: space-between;
+
+		h1 {
+			font-size: 40px;
+			font-weight: 500;
+			line-height: 60px;
+			margin: 8px 0 10px;
+			color: @color-font-medium;
+			text-align: center;
+			padding-bottom: 20px;
+		}
+
+		.WhatWeDo__List {
+			display: flex;
+			justify-content: center;
+			flex: 1;
+			flex-wrap: wrap;
+			margin: 20px auto;
+		}
+
+		.WhatWeDo__Card {
+			width: 90%;
+			color: @color-font-light;
+			border-radius: 5px;
+			background-color: @color-white;
+			box-shadow: 0 2px 15px 0 rgba(188, 188, 222, 0.25);
+			margin-bottom: 30px;
+			line-height: 24px;
+			text-align: center;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1.5;
+			letter-spacing: 0.5px;
+			padding: 30px 0px 10px;
+		}
+
+		.WhatWeDo__Card__Title {
+			font-size: 14px;
+			color: @color-font-medium;
+			letter-spacing: 0.5px;
+			line-height: 25px;
+			margin: 4px;
+			padding: 10px 4px 30px;
+		}
+
+		.WhatWeDo__Button__Container {
+			display: flex;
+			justify-content: center;
+			padding-top: 10px;
+		}
+	}
+}
+
+@media screen and (min-width: 560px) {
+	.WhatWeDo__Main {
+		margin-bottom: 25px;
+
+		.WhatWeDo__Content {
+			.WhatWeDo__Card {
+				width: 80%;
+			}
+
+			.WhatWeDo__Button__Container {
+				padding-top: 20px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.WhatWeDo__Main {
+		margin-bottom: 30px;
+
+		.WhatWeDo__Content {
+			.WhatWeDo__Card {
+				width: 27%;
+				margin: 0px 3%;
+				padding: 3%;
+			}
+
+			.WhatWeDo__Button__Container {
+				padding-top: 50px;
+			}
+		}
+	}
+}

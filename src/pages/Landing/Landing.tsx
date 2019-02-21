@@ -8,6 +8,7 @@ import LandingHead from '@components/ui/LandingHead';
 import { RouterStore } from '@store/RouterStore';
 
 import About from '@pages/Landing/About';
+import WhatWeDo from '@pages/Landing/WhatWeDo';
 
 import './style.less';
 
@@ -29,6 +30,7 @@ class Landing extends React.Component<LandingProps> {
 				<section className="Landing__Main">
 					<LandingHead routerStore={this.props.routerStore} />
 					<About />
+					<WhatWeDo />
 				</section>
 			</Page>
 		);
