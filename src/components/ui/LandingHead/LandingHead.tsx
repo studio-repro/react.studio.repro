@@ -16,14 +16,16 @@ const LandingHead = (props: LandingHeadProps) => (
 			<div className="Landing__Particles__Container">
 				<ParticleBackground />
 			</div>
-			<section className="Image__Wrapper">
-				<Logo />
-			</section>
-			<section className="Content__Wrapper">
-				<h1>Studio Repro</h1>
-				<p>
-					<span>Retouching & DTP Specialists</span>
-				</p>
+			<section className="Landing__Content">
+				<section className="Image__Wrapper">
+					<Logo />
+				</section>
+				<section className="Content__Wrapper">
+					<h1>Studio Repro</h1>
+					<p>
+						<span>Retouching & DTP Specialists</span>
+					</p>
+				</section>
 			</section>
 		</section>
 	</section>

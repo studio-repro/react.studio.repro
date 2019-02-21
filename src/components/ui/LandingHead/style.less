@@ -8,9 +8,9 @@
 	justify-content: center;
 	width: 100%;
 	min-height: calc(100vh - 64px);
-	padding: 40px;
 	position: relative;
 	background: #0000009c;
+	z-index: 11;
 
 	.Landing__Particles__Container {
 		position: absolute;
@@ -21,40 +21,46 @@
 		min-height: calc(100vh - 64px);
 	}
 
-	.Content__Wrapper {
-		margin: auto;
-		max-width: 560px;
-		min-width: 420px;
-		z-index: 11;
+	.Landing__Content {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: 40px;
+		background: #00000091;
+		z-index: 12;
 
-		h1 {
-			font-size: 68px;
-			font-weight: 600;
-			line-height: 76px;
-			margin: 8px 0 28px;
-			color: @color-white;
-			z-index: 12;
+		.Content__Wrapper {
+			margin: auto;
+			max-width: 560px;
+			min-width: 420px;
+
+			h1 {
+				font-size: 68px;
+				font-weight: 600;
+				line-height: 76px;
+				margin: 8px 0 28px;
+				color: @color-white;
+			}
+
+			p {
+				font-size: 20px;
+				line-height: 40px;
+				color: @color-white;
+			}
 		}
 
-		p {
-			font-size: 20px;
-			line-height: 40px;
-			color: @color-white;
-			z-index: 12;
-		}
-	}
+		.Image__Wrapper {
+			max-width: 500px;
+			margin: auto;
 
-	.Image__Wrapper {
-		max-width: 500px;
-		margin: auto;
-		z-index: 11;
-
-		.Logo__Main {
-			width: 200px;
-			height: 200px;
-			margin: 0;
-			padding: 4px;
-			z-index: 12;
+			.Logo__Main {
+				width: 200px;
+				height: 200px;
+				margin: 0;
+				padding: 4px;
+			}
 		}
 	}
 }
@@ -67,33 +73,44 @@
 
 @media screen and (max-width: 780px) {
 	.Landing__Head {
-		flex-direction: column;
-
-		.Image__Wrapper {
-			max-width: 500px;
-			margin: auto;
-
-			.Logo__Main {
-				width: 180px;
-				height: 180px;
-				margin: 8px;
-				padding-right: 0px;
-			}
+		.Landing__Particles__Container {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			min-height: calc(100vh - 64px);
 		}
 
-		.Content__Wrapper {
-			width: 100%;
-			text-align: center;
-			min-width: auto;
+		.Landing__Content {
+			flex-direction: column;
 
-			h1 {
-				font-size: 48px;
-				line-height: 56px;
+			.Image__Wrapper {
+				max-width: 500px;
+				margin: auto;
+
+				.Logo__Main {
+					width: 180px;
+					height: 180px;
+					margin: 8px;
+					padding-right: 0px;
+				}
 			}
 
-			p {
-				font-size: 16px;
-				line-height: 36px;
+			.Content__Wrapper {
+				width: 100%;
+				text-align: center;
+				min-width: auto;
+
+				h1 {
+					font-size: 48px;
+					line-height: 56px;
+				}
+
+				p {
+					font-size: 16px;
+					line-height: 36px;
+				}
 			}
 		}
 	}
