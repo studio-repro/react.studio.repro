@@ -13,14 +13,14 @@ const ParticleBackground = (props: ParticleBackgroundProps) => (
 		params={{
 			particles: {
 				number: {
-					value: 6,
+					value: 20,
 					density: {
 						enable: true,
 						value_area: 800
 					}
 				},
 				color: {
-					value: '#1b1e34'
+					value: '#22A9FB'
 				},
 				shape: {
 					type: 'polygon',
@@ -43,7 +43,7 @@ const ParticleBackground = (props: ParticleBackgroundProps) => (
 					}
 				},
 				size: {
-					value: 15,
+					value: 10,
 					random: false,
 					anim: {
 						enable: true,

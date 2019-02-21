@@ -50,7 +50,7 @@ routes[AppRoute.name] = AppRoute;
 
 export const ShowCaseRoute: AdvRoute = {
 	name: RouteNames.SHOWCASE,
-	path: '/#showcase',
+	path: '/showcase',
 
 	link: () => ({
 		name: ShowCaseRoute.name
@@ -70,7 +70,7 @@ routes[ShowCaseRoute.name] = ShowCaseRoute;
 
 export const AboutRoute: AdvRoute = {
 	name: RouteNames.ABOUT,
-	path: '/#about',
+	path: '/about',
 
 	link: () => ({
 		name: AboutRoute.name
@@ -90,7 +90,7 @@ routes[AboutRoute.name] = AboutRoute;
 
 export const ContactRoute: AdvRoute = {
 	name: RouteNames.CONTACT,
-	path: '/#contact',
+	path: '/contact',
 
 	link: () => ({
 		name: ContactRoute.name

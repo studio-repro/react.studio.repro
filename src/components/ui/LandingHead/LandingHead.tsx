@@ -22,10 +22,7 @@ const LandingHead = (props: LandingHeadProps) => (
 			<section className="Content__Wrapper">
 				<h1>Studio Repro</h1>
 				<p>
-					<span>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum sit amet
-						libero eu facilisis.
-					</span>
+					<span>Retouching & DTP Specialists</span>
 				</p>
 			</section>
 		</section>
