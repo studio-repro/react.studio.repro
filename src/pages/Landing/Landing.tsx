@@ -7,6 +7,8 @@ import Page from '@components/structural/Page';
 import LandingHead from '@components/ui/LandingHead';
 import { RouterStore } from '@store/RouterStore';
 
+import About from '@pages/Landing/About';
+
 import './style.less';
 
 export interface LandingProps {
@@ -26,6 +28,7 @@ class Landing extends React.Component<LandingProps> {
 				<Header />
 				<section className="Landing__Main">
 					<LandingHead routerStore={this.props.routerStore} />
+					<About />
 				</section>
 			</Page>
 		);
