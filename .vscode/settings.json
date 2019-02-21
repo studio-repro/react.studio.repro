@@ -1,0 +1,16 @@
+{
+	"editor.formatOnPaste": false,
+	"editor.formatOnSave": true,
+	"javascript.validate.enable": false,
+	"javascript.format.enable": false,
+	"prettier.singleQuote": true,
+	"search.exclude": {
+		"**/build": true,
+		"**/node_modules": true
+	},
+	"tslint.configFile": "./tsconfig.json",
+	"tslint.exclude": "**/node_modules/**/*",
+	"typescript.format.enable": true,
+	"typescript.validate.enable": true,
+	"window.zoomLevel": 0
+}

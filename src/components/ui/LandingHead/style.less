@@ -1,0 +1,124 @@
+@import '~@themes/app-theme.less';
+
+.Landing__Head {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: calc(100vh - 64px);
+	padding: 40px;
+	position: relative;
+	background: #0000009c;
+
+	.Landing__Particles__Container {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		min-height: calc(100vh - 64px);
+	}
+
+	.Content__Wrapper {
+		width: 54%;
+		margin: auto;
+		max-width: 560px;
+		min-width: 420px;
+		z-index: 11;
+
+		h1 {
+			font-size: 68px;
+			font-weight: 600;
+			line-height: 76px;
+			margin: 8px 0 28px;
+			color: @color-white;
+			z-index: 12;
+		}
+
+		p {
+			font-size: 20px;
+			line-height: 40px;
+			color: @color-white;
+			z-index: 12;
+		}
+
+		.Content__Wrapper__Buttons {
+			z-index: 12;
+
+			.Read__More__Button {
+				background: @primary-color;
+				border-width: 0px;
+				min-width: 120px;
+				margin-right: 20px;
+				height: 40px;
+				border-radius: 8px;
+				padding-left: 30px;
+				padding-right: 30px;
+				color: @color-white;
+				font-size: 14px;
+				font-weight: normal;
+				cursor: pointer;
+			}
+
+			.Read__More__Button:hover {
+				background: @primary-5;
+			}
+		}
+	}
+
+	.Image__Wrapper {
+		max-width: 500px;
+		margin: auto;
+		z-index: 11;
+
+		.Logo__Main {
+			width: 200px;
+			height: 200px;
+			margin: 0;
+			padding: 4px;
+			z-index: 12;
+		}
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.Landing__Head {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.Landing__Head {
+		flex-direction: column;
+
+		.Image__Wrapper {
+			max-width: 500px;
+			margin: auto;
+
+			.Logo__Main {
+				width: 180px;
+				height: 180px;
+				margin: 8px;
+				padding-right: 0px;
+			}
+		}
+
+		.Content__Wrapper {
+			width: 100%;
+			text-align: center;
+			min-width: auto;
+
+			h1 {
+				font-size: 48px;
+				line-height: 56px;
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 36px;
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+version: '3.5'
+
+networks:
+  react-front-tier:
+    name: react-studio-repro-net
+
+services:
+  react-studio-repro:
+    image: react-studio-repro:1.10
+    build:
+      context: .
+    container_name: studio-repro-react
+    expose:
+      - 80
+    ports:
+      - 8080:80
+    restart: always
+    environment:
+      - NODE_ENV=production
+    networks:
+      - react-front-tier

@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package contact;
+
+service ContactManager {
+	rpc Echo(EchoRequest) returns (EchoReply);
+	rpc FindContactUsItemByEmail (FindContactUsItemByEmailRequest) returns (FindContactUsItemByEmailReply);
+	rpc SaveContactUsItem (SaveContactUsItemRequest) returns (SaveContactUsItemReply);
+}
+
+message EchoRequest {
+	string message = 1;
+}
+
+message EchoReply {
+	string message = 1;
+}
+
+message FindContactUsItemByEmailRequest {
+	string email_address = 1;
+}
+
+message FindContactUsItemByEmailReply {
+	ContactUs contact_us = 1;
+}
+
+message SaveContactUsItemRequest {
+	ContactUs contact_us = 2;
+}
+
+message SaveContactUsItemReply {
+	ContactUs contact_us = 1;
+}
+
+message ContactUs {
+	int32 id = 1;
+	string first_name = 2;
+	string last_name = 3;
+	string email_address = 4;
+	string message = 5;
+}

@@ -1,0 +1,74 @@
+@import '~@themes/app-theme.less';
+
+.Error__Main {
+	display: flex;
+	flex: 1;
+	background-color: @error-background;
+	height: calc(100vh - 0px);
+
+	.Error__Card {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		text-align: center;
+		padding: 0px;
+		background-color: @color-white;
+		margin: 40px;
+	}
+
+	.Error__Message {
+		color: @secondary-color;
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	.Error__Detail {
+		color: @text-color;
+		font-size: 16px;
+	}
+
+	.Logo__Main {
+		height: 200px;
+		width: 200px;
+		margin: 0;
+		padding: 10px;
+	}
+
+	.CTA__Button {
+		cursor: pointer;
+		background: @primary-color;
+		border-width: 0px;
+		min-width: 120px;
+		margin-right: 20px;
+		height: 40px;
+		border-radius: 8px;
+		padding-left: 30px;
+		padding-right: 30px;
+		color: @color-white;
+		font-size: 14px;
+		font-weight: normal;
+	}
+
+	.CTA__Button:hover {
+		background: @primary-5;
+	}
+}
+
+@media screen and (max-width: 840px) {
+	.Error__Main {
+		.Error__Card {
+			background-color: @color-transparent;
+		}
+
+		.Error__Message {
+			font-size: 18px;
+		}
+
+		.Error__Detail {
+			font-size: 14px;
+		}
+	}
+}

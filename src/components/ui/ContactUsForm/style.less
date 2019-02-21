@@ -1,0 +1,131 @@
+@import '~@themes/app-theme.less';
+
+.ContactUsForm__Main {
+	display: flex;
+	flex-flow: column;
+	padding: 0px;
+	justify-content: center;
+	background-color: @color-white;
+
+	.ContactUsForm__Content {
+		width: 80%;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.CTA__Button {
+		cursor: pointer;
+		background: @primary-color;
+		border-width: 0px;
+		min-width: 120px;
+		height: 40px;
+		border-radius: 8px;
+		padding-left: 30px;
+		padding-right: 30px;
+		color: @color-white;
+		font-size: 14px;
+		font-weight: normal;
+	}
+
+	.CTA__Button:hover {
+		background: @primary-5;
+	}
+
+	.ContactUsForm__Form {
+		padding: 20px 80px;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+
+		.Name__Container {
+			height: 32px;
+			padding-bottom: 0px;
+		}
+
+		.Name__Spacer {
+			margin-bottom: 0px;
+		}
+
+		.ContactUsForm__Input {
+			font-size: 13px;
+			font-weight: 500;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: normal;
+			letter-spacing: normal;
+			text-align: left;
+			color: @color-font-dark;
+			padding: 10px 16px;
+			border-radius: 8px;
+			background-color: @color-light-gray;
+			border: 1px solid @color-light-gray;
+		}
+
+		.ContactUsForm__Input:hover {
+			border: 1px solid @color-light-gray;
+		}
+
+		.ContactUsForm__Input:focus {
+			border: 1px solid @primary-color;
+		}
+
+		.ContactUsForm__Input::placeholder {
+			color: @color-placeholder;
+			opacity: 1;
+		}
+
+		button {
+			margin-top: 0px;
+			width: 200px;
+		}
+
+		.ant-form-item-children {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+
+		.ant-form-explain {
+			text-align: left;
+			padding-left: 16px;
+		}
+	}
+
+	@media screen and (max-width: 780px) {
+		.ContactUsForm__Form {
+			padding: 10px;
+
+			.Name__Spacer {
+				margin-bottom: 20px;
+			}
+
+			button {
+				margin-top: 10px;
+				width: 100%;
+			}
+
+			.ant-form-item-children {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		.ContactUsForm__Content {
+			background-color: @color-transparent;
+		}
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.ContactUsForm__Main {
+		padding: 10px 0px;
+
+		.ContactUsForm__Content {
+			width: 95%;
+		}
+
+		.Name__Container {
+			height: 40px;
+		}
+	}
+}

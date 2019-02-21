@@ -1,0 +1,73 @@
+{
+	"name": "react.studio.repro",
+	"version": "0.0.1",
+	"description": "Website for Studio Repro built using React, Typescript, MobX, Ant Design, and Webpack.",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nicolaspearson/react.studio.repro"
+	},
+	"license": "MIT",
+	"scripts": {
+		"start": "npm run tslint && craco start",
+		"build": "npm run tslint && craco build",
+		"cra-start": "react-scripts start",
+		"cra-build": "react-scripts build",
+		"cra-test": "react-scripts test",
+		"cra-eject": "react-scripts eject",
+		"prettier": "prettier --write \"src/**/*.{ts,tsx,css}\"",
+		"tslint": "tslint --fix -c tslint.json -p tsconfig.json",
+		"test": "jest --verbose --updateSnapshot",
+		"test:watch": "jest --watchAll --verbose --updateSnapshot",
+		"test:coverage": "jest --verbose --coverage --updateSnapshot"
+	},
+	"dependencies": {
+		"@bit/nicolaspearson.interaction.button": "~1.0.2",
+		"@bit/nicolaspearson.interaction.html-head": "~1.0.2",
+		"antd": "3.13.5",
+		"classnames": "~2.2.6",
+		"google-protobuf": "~3.7.0-rc.2",
+		"grpc-web": "~1.0.3",
+		"mobx": "~5.9.0",
+		"mobx-react": "~5.4.3",
+		"react": "~16.8.2",
+		"react-dom": "~16.8.2",
+		"react-particles-js": "~2.4.2",
+		"router5": "~7.0.1",
+		"router5-plugin-browser": "~7.0.1",
+		"typeface-montserrat": "^0.0.54"
+	},
+	"devDependencies": {
+		"@babel/plugin-proposal-decorators": "~7.3.0",
+		"@craco/craco": "~3.4.1",
+		"@types/classnames": "~2.2.7",
+		"@types/enzyme": "~3.1.18",
+		"@types/enzyme-adapter-react-16": "~1.0.4",
+		"@types/google-protobuf": "~3.2.7",
+		"@types/jest": "~23.3.13",
+		"@types/node": "~11.9.4",
+		"@types/react": "~16.8.3",
+		"@types/react-dom": "~16.8.2",
+		"antd-iconfont": "~3.0.3",
+		"craco-antd": "~1.10.0",
+		"dotenv": "~6.2.0",
+		"enzyme": "~3.9.0",
+		"enzyme-adapter-react-16": "~1.9.1",
+		"enzyme-to-json": "~3.3.5",
+		"jest": "~23.6.0",
+		"less": "~3.9.0",
+		"prettier": "~1.16.4",
+		"react-scripts": "~2.1.5",
+		"ts-jest": "~23.10.5",
+		"tslint": "~5.12.1",
+		"tslint-config-prettier": "~1.18.0",
+		"tslint-react": "~3.6.0",
+		"typescript": "~3.3.3",
+		"webpackbar": "~3.1.5"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	]
+}
