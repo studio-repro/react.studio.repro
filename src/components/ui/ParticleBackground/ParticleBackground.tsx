@@ -13,64 +13,64 @@ const ParticleBackground = (props: ParticleBackgroundProps) => (
 		params={{
 			particles: {
 				number: {
-					value: 120,
+					value: 6,
 					density: {
 						enable: true,
-						value_area: 1200
+						value_area: 800
 					}
 				},
 				color: {
-					value: '#d6d6d6'
+					value: '#1b1e34'
 				},
 				shape: {
-					type: 'circle',
+					type: 'polygon',
 					stroke: {
 						width: 0,
-						color: '#000000'
+						color: '#000'
 					},
 					polygon: {
-						nb_sides: 5
+						nb_sides: 6
 					}
 				},
 				opacity: {
-					value: 1,
+					value: 0.3,
 					random: true,
 					anim: {
-						enable: true,
+						enable: false,
 						speed: 1,
-						opacity_min: 0,
+						opacity_min: 0.1,
 						sync: false
 					}
 				},
 				size: {
-					value: 2,
-					random: true,
+					value: 15,
+					random: false,
 					anim: {
-						enable: false,
-						speed: 6,
-						size_min: 0.3,
+						enable: true,
+						speed: 10,
+						size_min: 40,
 						sync: false
 					}
 				},
 				line_linked: {
-					enable: true,
-					distance: 150,
-					color: '#303841',
-					opacity: 0.4,
-					width: 1
+					enable: false,
+					distance: 200,
+					color: '#ffffff',
+					opacity: 1,
+					width: 2
 				},
 				move: {
 					enable: true,
-					speed: 2,
+					speed: 8,
 					direction: 'none',
-					random: true,
+					random: false,
 					straight: false,
 					out_mode: 'out',
 					bounce: false,
 					attract: {
 						enable: false,
 						rotateX: 600,
-						rotateY: 600
+						rotateY: 1200
 					}
 				}
 			},
@@ -79,10 +79,10 @@ const ParticleBackground = (props: ParticleBackgroundProps) => (
 				events: {
 					onhover: {
 						enable: false,
-						mode: 'repulse'
+						mode: 'grab'
 					},
 					onclick: {
-						enable: true,
+						enable: false,
 						mode: 'push'
 					},
 					resize: true
@@ -97,7 +97,9 @@ const ParticleBackground = (props: ParticleBackgroundProps) => (
 					bubble: {
 						distance: 400,
 						size: 40,
-						duration: 2
+						duration: 2,
+						opacity: 8,
+						speed: 3
 					},
 					repulse: {
 						distance: 200,
@@ -110,7 +112,8 @@ const ParticleBackground = (props: ParticleBackgroundProps) => (
 						particles_nb: 2
 					}
 				}
-			}
+			},
+			retina_detect: true
 		}}
 	/>
 );

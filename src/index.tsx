@@ -25,10 +25,6 @@ export class Main extends React.Component {
 		router.start();
 	}
 
-	public componentDidMount() {
-		this.store.contactUsStore.echoRequest('Contact API Connected!');
-	}
-
 	public renderRoute() {
 		const { route, routes } = this.store.routerStore;
 		if (route) {
@@ -40,7 +36,6 @@ export class Main extends React.Component {
 		return (
 			<Provider
 				store={this.store}
-				contactUsStore={this.store.contactUsStore}
 				flagStore={this.store.flagStore}
 				routerStore={this.store.routerStore}
 			>

@@ -4,10 +4,7 @@ import { Route, State } from 'router5';
 
 import App from '@containers/App';
 import { RouteNames } from '@enums/RouteNames';
-import About from '@pages/About';
-import Contact from '@pages/Contact';
-import Products from '@pages/Products';
-import Team from '@pages/Team';
+import Landing from '@pages/Landing';
 import { RouterStore } from '@store/RouterStore';
 
 export interface LinkData {
@@ -51,15 +48,35 @@ export const AppRoute: AdvRoute = {
 };
 routes[AppRoute.name] = AppRoute;
 
+export const ShowCaseRoute: AdvRoute = {
+	name: RouteNames.SHOWCASE,
+	path: '/#showcase',
+
+	link: () => ({
+		name: ShowCaseRoute.name
+	}),
+
+	component: () => <Landing />,
+
+	activate: action((store: RouterStore) => {
+		store.activatedRouteName(ShowCaseRoute.name);
+	}),
+
+	deactivate: (store: RouterStore) => {
+		store.deActivatedRouteName(ShowCaseRoute.name);
+	}
+};
+routes[ShowCaseRoute.name] = ShowCaseRoute;
+
 export const AboutRoute: AdvRoute = {
 	name: RouteNames.ABOUT,
-	path: '/about',
+	path: '/#about',
 
 	link: () => ({
 		name: AboutRoute.name
 	}),
 
-	component: () => <About />,
+	component: () => <Landing />,
 
 	activate: action((store: RouterStore) => {
 		store.activatedRouteName(AboutRoute.name);
@@ -73,13 +90,13 @@ routes[AboutRoute.name] = AboutRoute;
 
 export const ContactRoute: AdvRoute = {
 	name: RouteNames.CONTACT,
-	path: '/contact',
+	path: '/#contact',
 
 	link: () => ({
 		name: ContactRoute.name
 	}),
 
-	component: () => <Contact />,
+	component: () => <Landing />,
 
 	activate: action((store: RouterStore) => {
 		store.activatedRouteName(ContactRoute.name);
@@ -90,43 +107,3 @@ export const ContactRoute: AdvRoute = {
 	}
 };
 routes[ContactRoute.name] = ContactRoute;
-
-export const ProductsRoute: AdvRoute = {
-	name: RouteNames.PRODUCTS,
-	path: '/products',
-
-	link: () => ({
-		name: ProductsRoute.name
-	}),
-
-	component: () => <Products />,
-
-	activate: action((store: RouterStore) => {
-		store.activatedRouteName(ProductsRoute.name);
-	}),
-
-	deactivate: (store: RouterStore) => {
-		store.deActivatedRouteName(ProductsRoute.name);
-	}
-};
-routes[ProductsRoute.name] = ProductsRoute;
-
-export const TeamRoute: AdvRoute = {
-	name: RouteNames.TEAM,
-	path: '/team',
-
-	link: () => ({
-		name: TeamRoute.name
-	}),
-
-	component: () => <Team />,
-
-	activate: action((store: RouterStore) => {
-		store.activatedRouteName(TeamRoute.name);
-	}),
-
-	deactivate: (store: RouterStore) => {
-		store.deActivatedRouteName(TeamRoute.name);
-	}
-};
-routes[TeamRoute.name] = TeamRoute;
