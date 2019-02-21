@@ -16,7 +16,7 @@ const ParticleBackground = (props: ParticleBackgroundProps) => (
 					value: 20,
 					density: {
 						enable: true,
-						value_area: 800
+						value_area: 1200
 					}
 				},
 				color: {
