@@ -17,11 +17,11 @@ const SiteNav = (props: SiteNavProps) => (
 		<div className="SiteNav__Inner">
 			<div className="SiteNav__Start">
 				<Nav>
-					<RouterLink routeName={RouteNames.SHOWCASE}>
-						<span className="SiteNav__Item">Showcase</span>
-					</RouterLink>
 					<RouterLink routeName={RouteNames.ABOUT}>
 						<span className="SiteNav__Item">About</span>
+					</RouterLink>
+					<RouterLink routeName={RouteNames.SHOWCASE}>
+						<span className="SiteNav__Item">Showcase</span>
 					</RouterLink>
 					<RouterLink routeName={RouteNames.CONTACT}>
 						<span className="SiteNav__Item">Contact</span>

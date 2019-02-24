@@ -19,11 +19,11 @@ const Footer = () => (
 					<div className="Navigation__Column">
 						<h5 className="Navigation__Head">Site Navigation</h5>
 						<Nav stack={true}>
-							<RouterLink routeName={RouteNames.SHOWCASE}>
-								<span className="Navigation__Link">Showcase</span>
-							</RouterLink>
 							<RouterLink routeName={RouteNames.ABOUT}>
 								<span className="Navigation__Link">About</span>
+							</RouterLink>
+							<RouterLink routeName={RouteNames.SHOWCASE}>
+								<span className="Navigation__Link">Showcase</span>
 							</RouterLink>
 							<RouterLink routeName={RouteNames.CONTACT}>
 								<span className="Navigation__Link">Contact</span>

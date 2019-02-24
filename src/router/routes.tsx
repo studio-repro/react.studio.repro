@@ -48,26 +48,6 @@ export const AppRoute: AdvRoute = {
 };
 routes[AppRoute.name] = AppRoute;
 
-export const ShowCaseRoute: AdvRoute = {
-	name: RouteNames.SHOWCASE,
-	path: '/showcase',
-
-	link: () => ({
-		name: ShowCaseRoute.name
-	}),
-
-	component: () => <Landing />,
-
-	activate: action((store: RouterStore) => {
-		store.activatedRouteName(ShowCaseRoute.name);
-	}),
-
-	deactivate: (store: RouterStore) => {
-		store.deActivatedRouteName(ShowCaseRoute.name);
-	}
-};
-routes[ShowCaseRoute.name] = ShowCaseRoute;
-
 export const AboutRoute: AdvRoute = {
 	name: RouteNames.ABOUT,
 	path: '/about',
@@ -76,7 +56,7 @@ export const AboutRoute: AdvRoute = {
 		name: AboutRoute.name
 	}),
 
-	component: () => <Landing />,
+	component: () => <Landing path="about" />,
 
 	activate: action((store: RouterStore) => {
 		store.activatedRouteName(AboutRoute.name);
@@ -88,6 +68,26 @@ export const AboutRoute: AdvRoute = {
 };
 routes[AboutRoute.name] = AboutRoute;
 
+export const ShowCaseRoute: AdvRoute = {
+	name: RouteNames.SHOWCASE,
+	path: '/showcase',
+
+	link: () => ({
+		name: ShowCaseRoute.name
+	}),
+
+	component: () => <Landing path="showcase" />,
+
+	activate: action((store: RouterStore) => {
+		store.activatedRouteName(ShowCaseRoute.name);
+	}),
+
+	deactivate: (store: RouterStore) => {
+		store.deActivatedRouteName(ShowCaseRoute.name);
+	}
+};
+routes[ShowCaseRoute.name] = ShowCaseRoute;
+
 export const ContactRoute: AdvRoute = {
 	name: RouteNames.CONTACT,
 	path: '/contact',
@@ -96,7 +96,7 @@ export const ContactRoute: AdvRoute = {
 		name: ContactRoute.name
 	}),
 
-	component: () => <Landing />,
+	component: () => <Landing path="contact" />,
 
 	activate: action((store: RouterStore) => {
 		store.activatedRouteName(ContactRoute.name);

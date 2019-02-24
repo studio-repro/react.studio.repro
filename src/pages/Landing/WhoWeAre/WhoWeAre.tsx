@@ -5,7 +5,7 @@ import RoundButton from '@components/ui/RoundButton';
 
 import './style.less';
 
-export interface AboutProps {
+export interface WhoWeAreProps {
 	// Empty
 }
 
@@ -14,14 +14,14 @@ interface State {
 }
 
 @observer
-class About extends React.Component<AboutProps, State> {
+class WhoWeAre extends React.Component<WhoWeAreProps, State> {
 	public handleGetInTouchClick = (event: React.FormEvent) => {
 		event.preventDefault();
 	};
 
 	public render() {
 		return (
-			<section className="About__Main">
+			<section className="WhoWeAre__Main">
 				<section className="Content__Wrapper">
 					<h1>Who We Are</h1>
 					<p>
@@ -33,7 +33,7 @@ class About extends React.Component<AboutProps, State> {
 							us, so we know how to get your titles ready to hit the press.
 						</span>
 					</p>
-					<div className="About__Button__Container">
+					<div className="WhoWeAre__Button__Container">
 						<RoundButton
 							onClick={this.handleGetInTouchClick}
 							text={'get in touch'}
@@ -46,4 +46,4 @@ class About extends React.Component<AboutProps, State> {
 	}
 }
 
-export default About;
+export default WhoWeAre;
