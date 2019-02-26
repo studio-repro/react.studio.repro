@@ -8,8 +8,8 @@ import Page from '@components/structural/Page';
 import LandingHead from '@components/ui/LandingHead';
 import { RouterStore } from '@store/RouterStore';
 
-import WhoWeAre from '@pages/Landing/WhoWeAre';
 import WhatWeDo from '@pages/Landing/WhatWeDo';
+import WhoWeAre from '@pages/Landing/WhoWeAre';
 
 import './style.less';
 
