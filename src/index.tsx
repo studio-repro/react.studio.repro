@@ -6,6 +6,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import ErrorBoundary from '@components/boundary/ErrorBoundary';
+import { RouteNames } from '@enums/RouteNames';
 import { RootStore } from '@store/RootStore';
 import * as serviceWorker from '@utils/serviceWorker';
 
@@ -23,6 +24,7 @@ export class Main extends React.Component {
 		super(props, context);
 		const { router } = this.store.routerStore;
 		router.start();
+		router.navigate(RouteNames.HOME);
 	}
 
 	public renderRoute() {

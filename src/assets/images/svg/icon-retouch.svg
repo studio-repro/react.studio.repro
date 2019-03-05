@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="74px" height="74px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
     <title>Retouch icon</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group" transform="translate(-155.000000, -155.000000)" fill-rule="nonzero">
+        <g id="Group" transform="translate(-169.000000, -170.000000)" fill-rule="nonzero">
             <g id="Retouching" transform="translate(59.000000, 119.000000)">
                 <g id="Retouch-icon" transform="translate(98.000000, 38.000000)">
-                    <circle id="Oval-Copy" stroke="#E2E2E2" stroke-width="3" cx="35" cy="35" r="35"></circle>
+                    <circle id="Oval-Copy" cx="35" cy="35" r="35"></circle>
                     <g id="paint-palette" transform="translate(12.000000, 13.000000)" fill="#8B8B8B" fill-opacity="0.894644475">
                         <circle id="Oval" cx="31" cy="21" r="1"></circle>
                         <path d="M30.1991323,25.0104569 C29.6869683,24.9331196 29.2095178,25.2931055 29.1336173,25.8140599 C28.877207,27.5739378 27.4136133,29.0335256 25.2185981,29.7185954 C22.8724387,30.4508687 19.615849,30.2054108 17.6292082,28.0064931 C17.2786963,27.6185666 16.6851903,27.5930099 16.3036239,27.949086 C15.9219637,28.3053529 15.8967261,28.9086034 16.2471442,29.2964345 C17.3971911,30.5694018 18.9592021,31.4369916 20.7643009,31.8053692 C21.4017147,31.9354409 22.0629588,32 22.7285186,32 C23.7565994,32 24.7948127,31.8459928 25.7694159,31.5417928 C28.6731482,30.635582 30.6247003,28.5988725 30.9897543,26.0934661 C31.0656548,25.5725117 30.7116715,25.0876036 30.1991323,25.0104569 Z" id="Shape"></path>

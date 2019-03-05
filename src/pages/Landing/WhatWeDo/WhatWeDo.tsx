@@ -21,15 +21,15 @@ class WhatWeDo extends React.Component<WhatWeDoProps> {
 					<h1>What We Do</h1>
 					<div className="WhatWeDo__List">
 						<div className="WhatWeDo__Card">
-							<RoundIcon type="svg" />
+							<RoundIcon type="svg" icon="retouch" />
 							<h4 className="WhatWeDo__Card__Title">Retouching</h4>
 						</div>
 						<div className="WhatWeDo__Card">
-							<RoundIcon type="svg" />
-							<h4 className="WhatWeDo__Card__Title">DTP</h4>
+							<RoundIcon type="svg" icon="desktop" />
+							<h4 className="WhatWeDo__Card__Title">Desktop Publishing</h4>
 						</div>
 						<div className="WhatWeDo__Card">
-							<RoundIcon type="svg" />
+							<RoundIcon type="svg" icon="scanning" />
 							<h4 className="WhatWeDo__Card__Title">Scanning</h4>
 						</div>
 					</div>

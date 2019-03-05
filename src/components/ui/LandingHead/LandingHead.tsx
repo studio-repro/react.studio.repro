@@ -1,8 +1,9 @@
 import * as React from 'react';
 
-import Logo from '@components/icon/Logo';
 import ParticleBackground from '@components/ui/ParticleBackground';
 import { RouterStore } from '@store/RouterStore';
+
+import { ReactComponent as Spread } from '@assets/images/theme/spread.svg';
 
 import './style.less';
 
@@ -18,13 +19,7 @@ const LandingHead = (props: LandingHeadProps) => (
 			</div>
 			<section className="Landing__Content">
 				<section className="Image__Wrapper">
-					<Logo />
-				</section>
-				<section className="Content__Wrapper">
-					<h1>Studio Repro</h1>
-					<p>
-						<span>Retouching & DTP Specialists</span>
-					</p>
+					<Spread />
 				</section>
 			</section>
 		</section>
