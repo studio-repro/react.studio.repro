@@ -3,7 +3,7 @@ import * as React from 'react';
 import './style.less';
 
 import * as placeholder from '@assets/images/png/icon-placeholder.png';
-import { ReactComponent as PlaceHolder } from '@assets/images/svg/placeholder.svg';
+import { ReactComponent as PlaceHolder } from '@assets/images/svg/icon-placeholder.svg';
 
 export interface RoundIconProps {
 	icon?: string;
