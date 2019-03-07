@@ -23,14 +23,27 @@ class WhatWeDo extends React.Component<WhatWeDoProps> {
 						<div className="WhatWeDo__Card">
 							<RoundIcon type="svg" icon="retouch" />
 							<h4 className="WhatWeDo__Card__Title">Retouching</h4>
+							<p className="WhatWeDo__Card__Desc">
+								&bull; Photo Editing &bull; Colour Correction &bull; Deep-etching &bull; Bleed
+								Extension &bull; Compositions &bull; Cover ups &bull; Merges &bull; Removal
+							</p>
 						</div>
 						<div className="WhatWeDo__Card">
 							<RoundIcon type="svg" icon="desktop" />
 							<h4 className="WhatWeDo__Card__Title">Desktop Publishing</h4>
+							<p className="WhatWeDo__Card__Desc">
+								&bull; Linking Hi-Res Images &bull; Colour Management &bull; Prepress Editing &bull;
+								Preflighting &amp; PDF creation &bull; Advert Preflighting &bull; Binders &amp;
+								Ebooks
+							</p>
 						</div>
 						<div className="WhatWeDo__Card">
 							<RoundIcon type="svg" icon="scanning" />
-							<h4 className="WhatWeDo__Card__Title">Scanning</h4>
+							<h4 className="WhatWeDo__Card__Title">Scanning &amp; Production</h4>
+							<p className="WhatWeDo__Card__Desc">
+								&bull; Artwork &bull; Photos &bull; Transparencies &bull; Folio changes &bull; Final
+								PDF creation &bull; Uploads &bull; Backups
+							</p>
 						</div>
 					</div>
 					<div className="WhatWeDo__Button__Container">
