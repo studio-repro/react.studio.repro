@@ -6,8 +6,8 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	padding: 20px 0px;
 	width: 100%;
-	min-height: calc(100vh - 64px);
 	position: relative;
 	background: #0000009c;
 	z-index: 1;
@@ -18,7 +18,6 @@
 		left: 0;
 		right: 0;
 		width: 100%;
-		min-height: calc(100vh - 64px);
 	}
 
 	.Landing__Content {
@@ -28,7 +27,6 @@
 		justify-content: center;
 		width: 100%;
 		padding: 20px;
-		background: #00000091;
 		z-index: 12;
 
 		.Content__Wrapper {
@@ -72,6 +70,7 @@
 
 @media screen and (max-width: 780px) {
 	.Landing__Head {
+		min-height: calc(100vh - 64px);
 		z-index: 1;
 
 		.Landing__Particles__Container {
