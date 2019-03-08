@@ -24,15 +24,7 @@ class Showcase extends React.Component<ShowcaseProps, State> {
 			<section className="Showcase__Main">
 				<section className="Content__Wrapper">
 					<h1>Showcase</h1>
-					<p>
-						<span>
-							We’re a small team with a passion for Retouching and DTP. Specialising
-							<br />
-							in the Magazine and Books field, we have over 30 years exprerience between
-							<br />
-							us, so we know how to get your titles ready to hit the press.
-						</span>
-					</p>
+					<p>Use the toggle to preview the "before" and "after" image</p>
 					<div className="Showcase__Button__Container">
 						<RoundButton
 							onClick={this.handleGetInTouchClick}
