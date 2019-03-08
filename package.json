@@ -7,6 +7,7 @@
 		"url": "git+https://github.com/nicolaspearson/react.studio.repro"
 	},
 	"license": "MIT",
+	"homepage": "https://nicolaspearson.github.io/react.studio.repro",
 	"scripts": {
 		"start": "npm run tslint && craco start",
 		"build": "npm run tslint && craco build",
@@ -18,7 +19,9 @@
 		"tslint": "tslint --fix -c tslint.json -p tsconfig.json",
 		"test": "jest --verbose --updateSnapshot",
 		"test:watch": "jest --watchAll --verbose --updateSnapshot",
-		"test:coverage": "jest --verbose --coverage --updateSnapshot"
+		"test:coverage": "jest --verbose --coverage --updateSnapshot",
+		"predeploy": "yarn run build",
+		"deploy": "gh-pages -d build"
 	},
 	"dependencies": {
 		"@bit/nicolaspearson.interaction.button": "~1.0.2",
@@ -49,6 +52,7 @@
 		"enzyme": "~3.9.0",
 		"enzyme-adapter-react-16": "~1.10.0",
 		"enzyme-to-json": "~3.3.5",
+		"gh-pages": "~2.0.1",
 		"jest": "~23.6.0",
 		"less": "~3.9.0",
 		"prettier": "~1.16.4",
