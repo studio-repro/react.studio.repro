@@ -8,6 +8,7 @@ import Page from '@components/structural/Page';
 import LandingHead from '@components/ui/LandingHead';
 import { RouterStore } from '@store/RouterStore';
 
+import Contact from '@pages/Landing/Contact';
 import Showcase from '@pages/Landing/Showcase';
 import WhatWeDo from '@pages/Landing/WhatWeDo';
 import WhoWeAre from '@pages/Landing/WhoWeAre';
@@ -75,7 +76,9 @@ class Landing extends React.Component<LandingProps> {
 					<div ref={this.showcaseRef}>
 						<Showcase />
 					</div>
-					<div ref={this.contactRef} />
+					<div ref={this.contactRef}>
+						<Contact />
+					</div>
 				</section>
 				<Footer />
 			</Page>

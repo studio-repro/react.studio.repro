@@ -36,7 +36,7 @@ class WhoWeAre extends React.Component<WhoWeAreProps, State> {
 					<div className="WhoWeAre__Button__Container">
 						<RoundButton
 							onClick={this.handleGetInTouchClick}
-							text={'get in touch'}
+							text={'send us a message'}
 							type={'primary'}
 						/>
 					</div>
