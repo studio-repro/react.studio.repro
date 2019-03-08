@@ -15,7 +15,7 @@ interface State {
 
 @observer
 class WhoWeAre extends React.Component<WhoWeAreProps, State> {
-	public handleGetInTouchClick = (event: React.FormEvent) => {
+	public handleGetInTouchClick = (event: React.MouseEvent) => {
 		event.preventDefault();
 	};
 
@@ -36,7 +36,7 @@ class WhoWeAre extends React.Component<WhoWeAreProps, State> {
 					<div className="WhoWeAre__Button__Container">
 						<RoundButton
 							onClick={this.handleGetInTouchClick}
-							text={'send us a message'}
+							text={'send a message'}
 							type={'primary'}
 						/>
 					</div>

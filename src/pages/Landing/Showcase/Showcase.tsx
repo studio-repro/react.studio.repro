@@ -1,7 +1,6 @@
+import { Switch } from 'antd';
 import { observer } from 'mobx-react';
 import * as React from 'react';
-
-import RoundButton from '@components/ui/RoundButton';
 
 import './style.less';
 
@@ -15,8 +14,10 @@ interface State {
 
 @observer
 class Showcase extends React.Component<ShowcaseProps, State> {
-	public handleGetInTouchClick = (event: React.FormEvent) => {
-		event.preventDefault();
+	public handleGetInTouchClick = (checked: boolean, event: MouseEvent) => {
+		if (event) {
+			event.preventDefault();
+		}
 	};
 
 	public render() {
@@ -26,10 +27,10 @@ class Showcase extends React.Component<ShowcaseProps, State> {
 					<h1>Showcase</h1>
 					<p>Use the toggle to preview the "before" and "after" image</p>
 					<div className="Showcase__Button__Container">
-						<RoundButton
+						<Switch
+							checkedChildren="After"
+							unCheckedChildren="Before"
 							onClick={this.handleGetInTouchClick}
-							text={'get in touch'}
-							type={'primary'}
 						/>
 					</div>
 				</section>

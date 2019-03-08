@@ -2,7 +2,7 @@ import { Button } from 'antd';
 import * as React from 'react';
 
 export interface RoundButtonProps {
-	onClick: (event: React.FormEvent) => void;
+	onClick: (event: React.MouseEvent) => void;
 	text: string;
 	type: 'ghost' | 'default' | 'primary' | 'dashed' | 'danger' | undefined;
 }

@@ -10,7 +10,7 @@ export interface WhatWeDoProps {
 }
 
 class WhatWeDo extends React.Component<WhatWeDoProps> {
-	public handleGetInTouchClick = (event: React.FormEvent) => {
+	public handleGetInTouchClick = (event: React.MouseEvent) => {
 		event.preventDefault();
 	};
 
