@@ -2,7 +2,6 @@ import { action } from 'mobx';
 import * as React from 'react';
 import { Route, State } from 'router5';
 
-import App from '@containers/App';
 import { RouteNames } from '@enums/RouteNames';
 import Landing from '@pages/Landing';
 import { RouterStore } from '@store/RouterStore';
@@ -38,7 +37,10 @@ export const AppRoute: AdvRoute = {
 		name: AppRoute.name
 	}),
 
-	component: () => <App />,
+	component: () => {
+		refreshToggle = !refreshToggle;
+		return <Landing path="/" refresh={refreshToggle} />;
+	},
 
 	activate: action((store: RouterStore) => {
 		store.activatedRouteName(AppRoute.name);
