@@ -19,6 +19,9 @@ const Footer = () => (
 					<div className="Navigation__Column">
 						<h5 className="Navigation__Head">Site Navigation</h5>
 						<Nav stack={true}>
+							<RouterLink routeName={RouteNames.HOME}>
+								<span className="Navigation__Link">Home</span>
+							</RouterLink>
 							<RouterLink routeName={RouteNames.ABOUT}>
 								<span className="Navigation__Link">About</span>
 							</RouterLink>

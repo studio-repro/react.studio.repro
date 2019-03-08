@@ -39,7 +39,7 @@ export const AppRoute: AdvRoute = {
 
 	component: () => {
 		refreshToggle = !refreshToggle;
-		return <Landing path="/" refresh={refreshToggle} />;
+		return <Landing path="/" home={true} refresh={refreshToggle} />;
 	},
 
 	activate: action((store: RouterStore) => {

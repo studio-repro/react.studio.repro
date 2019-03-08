@@ -17,6 +17,7 @@ import './style.less';
 export interface LandingProps {
 	routerStore?: RouterStore;
 	path?: string;
+	home?: boolean;
 	refresh?: boolean;
 }
 
@@ -32,7 +33,9 @@ class Landing extends React.Component<LandingProps> {
 	}
 
 	private scrollToElement() {
-		if (this.props.path) {
+		if (this.props.home) {
+			window.scrollTo(0, 0);
+		} else if (this.props.path) {
 			switch (this.props.path) {
 				case 'about':
 					if (this.aboutRef && this.aboutRef.current) {
