@@ -20,8 +20,7 @@ class RouterLink extends React.Component<RouterLinkProps> {
 			event.preventDefault();
 		}
 		if (this.props.routerStore) {
-			const { router } = this.props.routerStore;
-			router.navigate(this.props.routeName);
+			this.props.routerStore.navigate({ name: this.props.routeName }, { force: true });
 		}
 	};
 

@@ -37,8 +37,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, State> {
 
 	private onHomeClick = () => {
 		if (this.props.routerStore) {
-			const { router } = this.props.routerStore;
-			router.navigate(RouteNames.HOME);
+			this.props.routerStore.navigate(
+				{ name: RouteNames.HOME },
+				{ force: true, reload: true, replace: true }
+			);
 		}
 	};
 

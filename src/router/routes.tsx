@@ -28,6 +28,8 @@ export interface Routes {
 
 export const routes: Routes = {};
 
+let refreshToggle: boolean = false;
+
 export const AppRoute: AdvRoute = {
 	name: RouteNames.HOME,
 	path: '/',
@@ -56,7 +58,10 @@ export const AboutRoute: AdvRoute = {
 		name: AboutRoute.name
 	}),
 
-	component: () => <Landing path="about" />,
+	component: () => {
+		refreshToggle = !refreshToggle;
+		return <Landing path="about" refresh={refreshToggle} />;
+	},
 
 	activate: action((store: RouterStore) => {
 		store.activatedRouteName(AboutRoute.name);
@@ -76,7 +81,10 @@ export const ShowCaseRoute: AdvRoute = {
 		name: ShowCaseRoute.name
 	}),
 
-	component: () => <Landing path="showcase" />,
+	component: () => {
+		refreshToggle = !refreshToggle;
+		return <Landing path="showcase" refresh={refreshToggle} />;
+	},
 
 	activate: action((store: RouterStore) => {
 		store.activatedRouteName(ShowCaseRoute.name);
@@ -96,7 +104,10 @@ export const ContactRoute: AdvRoute = {
 		name: ContactRoute.name
 	}),
 
-	component: () => <Landing path="contact" />,
+	component: () => {
+		refreshToggle = !refreshToggle;
+		return <Landing path="contact" refresh={refreshToggle} />;
+	},
 
 	activate: action((store: RouterStore) => {
 		store.activatedRouteName(ContactRoute.name);

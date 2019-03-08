@@ -8,6 +8,7 @@ import Page from '@components/structural/Page';
 import LandingHead from '@components/ui/LandingHead';
 import { RouterStore } from '@store/RouterStore';
 
+import Showcase from '@pages/Landing/Showcase';
 import WhatWeDo from '@pages/Landing/WhatWeDo';
 import WhoWeAre from '@pages/Landing/WhoWeAre';
 
@@ -16,6 +17,7 @@ import './style.less';
 export interface LandingProps {
 	routerStore?: RouterStore;
 	path?: string;
+	refresh?: boolean;
 }
 
 @inject('routerStore')
@@ -26,16 +28,24 @@ class Landing extends React.Component<LandingProps> {
 	private contactRef = React.createRef<HTMLDivElement>();
 
 	public componentDidUpdate() {
+		this.scrollToElement();
+	}
+
+	private scrollToElement() {
 		if (this.props.path) {
 			switch (this.props.path) {
 				case 'about':
 					if (this.aboutRef && this.aboutRef.current) {
 						this.aboutRef.current.scrollIntoView();
 					}
+					break;
+
 				case 'showcase':
 					if (this.showcaseRef && this.showcaseRef.current) {
 						this.showcaseRef.current.scrollIntoView();
 					}
+					break;
+
 				case 'contact':
 					if (this.contactRef && this.contactRef.current) {
 						this.contactRef.current.scrollIntoView();
@@ -59,7 +69,9 @@ class Landing extends React.Component<LandingProps> {
 						<WhoWeAre />
 						<WhatWeDo />
 					</div>
-					<div ref={this.showcaseRef} />
+					<div ref={this.showcaseRef}>
+						<Showcase />
+					</div>
 					<div ref={this.contactRef} />
 				</section>
 				<Footer />
