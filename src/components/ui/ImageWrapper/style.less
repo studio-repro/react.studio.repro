@@ -1,0 +1,19 @@
+.Image__Container {
+	display: block;
+	overflow: hidden;
+	position: relative;
+
+	img {
+		width: 100%;
+	}
+
+	.Image__Blur {
+		filter: blur(10px);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
+}

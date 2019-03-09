@@ -2,6 +2,9 @@ import { Switch } from 'antd';
 import { observer } from 'mobx-react';
 import * as React from 'react';
 
+import ImageWrapper from '@components/ui/ImageWrapper';
+import { ImageSource } from '@models/ImageSource';
+
 import './style.less';
 
 export interface ShowcaseProps {
@@ -18,6 +21,20 @@ class Showcase extends React.Component<ShowcaseProps, State> {
 		isBefore: true
 	};
 
+	private imageBefore: ImageSource = {
+		large: 'https://res.cloudinary.com/lupinemoon/image/upload/v1552116808/dummy-before.jpg',
+		small:
+			'https://res.cloudinary.com/lupinemoon/image/upload/c_limit,h_275/v1552116776/dummy-before.jpg',
+		alt: 'Before Image'
+	};
+
+	private imageAfter: ImageSource = {
+		large: 'https://res.cloudinary.com/lupinemoon/image/upload/v1552116808/dummy-after.jpg',
+		small:
+			'https://res.cloudinary.com/lupinemoon/image/upload/c_limit,h_275/v1552116776/dummy-after.jpg',
+		alt: 'After Image'
+	};
+
 	public handleGetInTouchClick = (checked: boolean, event: MouseEvent) => {
 		if (event) {
 			event.preventDefault();
@@ -27,9 +44,7 @@ class Showcase extends React.Component<ShowcaseProps, State> {
 
 	public render() {
 		const { isBefore } = this.state;
-		const imageSrc = !isBefore
-			? 'https://res.cloudinary.com/lupinemoon/image/upload/v1552116776/dummy-after.jpg'
-			: 'https://res.cloudinary.com/lupinemoon/image/upload/v1552116808/dummy-before.jpg';
+		const imageSrc: ImageSource = !isBefore ? this.imageAfter : this.imageBefore;
 		return (
 			<section className="Showcase__Main">
 				<section className="Content__Wrapper">
@@ -43,7 +58,7 @@ class Showcase extends React.Component<ShowcaseProps, State> {
 						/>
 					</div>
 					<section className="Showcase__Image__Container">
-						<img className="Showcase__Image" src={imageSrc} />
+						<ImageWrapper className="Showcase__Image" imageSrc={imageSrc} render={true} />
 					</section>
 				</section>
 			</section>
