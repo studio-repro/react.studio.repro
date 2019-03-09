@@ -1,23 +1,12 @@
 import classnames from 'classnames';
 import * as React from 'react';
-import * as ReactCache from 'react-cache';
 
 import { ImageSource } from '@models/ImageSource';
 
 import './style.less';
 
-const ImageResource = ReactCache.unstable_createResource(
-	(src: string) =>
-		new Promise((resolve) => {
-			const img = new Image();
-			img.src = src;
-			img.onload = resolve;
-		})
-);
-
-const Img = ({ src, alt, ...props }: { src: any; alt: any }) => {
-	ImageResource.read(src);
-	return <img src={src} alt={alt} {...props} />;
+const Img = ({ src, alt, className, ...props }: { src: any; alt: any; className?: string }) => {
+	return <img className={classnames(className ? className : '')} src={src} alt={alt} {...props} />;
 };
 
 export interface ImageWrapperProps {
