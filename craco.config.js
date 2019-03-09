@@ -1,6 +1,6 @@
 const WebpackBar = require('webpackbar');
 const CracoAntDesignPlugin = require('craco-antd');
-const { ESLINT_MODES } = require('@craco/craco');
+const CracoBase64Loader = require('craco-base64-inline-loader');
 const path = require('path');
 
 module.exports = {
@@ -38,6 +38,13 @@ module.exports = {
 			plugin: CracoAntDesignPlugin,
 			options: {
 				customizeThemeLessPath: path.join(__dirname, 'src/theme/default/index.less')
+			}
+		},
+		{
+			plugin: CracoBase64Loader,
+			options: {
+				test: /\.(jpg|svg|png?)$/i,
+				limit: 30000
 			}
 		}
 	],

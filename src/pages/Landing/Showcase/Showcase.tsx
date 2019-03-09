@@ -2,9 +2,6 @@ import { Switch } from 'antd';
 import { observer } from 'mobx-react';
 import * as React from 'react';
 
-import * as afterImage from '@assets/images/jpg/dummy-after.jpg';
-import * as beforeImage from '@assets/images/jpg/dummy-before.jpg';
-
 import './style.less';
 
 export interface ShowcaseProps {
@@ -29,7 +26,10 @@ class Showcase extends React.Component<ShowcaseProps, State> {
 	};
 
 	public render() {
-		const jpgImage: any = this.state.isBefore ? beforeImage : afterImage;
+		const { isBefore } = this.state;
+		const imageSrc = !isBefore
+			? 'https://res.cloudinary.com/lupinemoon/image/upload/v1552116776/dummy-after.jpg'
+			: 'https://res.cloudinary.com/lupinemoon/image/upload/v1552116808/dummy-before.jpg';
 		return (
 			<section className="Showcase__Main">
 				<section className="Content__Wrapper">
@@ -43,7 +43,7 @@ class Showcase extends React.Component<ShowcaseProps, State> {
 						/>
 					</div>
 					<section className="Showcase__Image__Container">
-						<img className="Showcase__Image" src={jpgImage} />
+						<img className="Showcase__Image" src={imageSrc} />
 					</section>
 				</section>
 			</section>
