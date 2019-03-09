@@ -4,10 +4,10 @@
 	"description": "Website for Studio Repro built using React, Typescript, MobX, Ant Design, and Webpack.",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/nicolaspearson/react.studio.repro"
+		"url": "git+https://github.com/studio-repro/react.studio.repro"
 	},
 	"license": "MIT",
-	"homepage": "https://nicolaspearson.github.io/react.studio.repro",
+	"homepage": "https://studio-repro.github.io/react.studio.repro",
 	"scripts": {
 		"start": "npm run tslint && craco start",
 		"build": "npm run tslint && craco build",
