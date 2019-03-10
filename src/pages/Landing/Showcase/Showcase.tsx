@@ -1,4 +1,5 @@
 import { Switch } from 'antd';
+import classnames from 'classnames';
 import { observer } from 'mobx-react';
 import * as React from 'react';
 
@@ -15,24 +16,30 @@ interface State {
 	isBefore: boolean;
 }
 
-@observer
-class Showcase extends React.Component<ShowcaseProps, State> {
-	public state: State = {
-		isBefore: true
-	};
+interface ImageItem {
+	before: ImageSource;
+	after: ImageSource;
+}
 
-	private imageBefore: ImageSource = {
+const imageItem: ImageItem = {
+	before: {
 		large: 'https://res.cloudinary.com/lupinemoon/image/upload/v1552116808/dummy-before.jpg',
 		small:
 			'https://res.cloudinary.com/lupinemoon/image/upload/c_limit,h_275/v1552116776/dummy-before.jpg',
 		alt: 'Before Image'
-	};
-
-	private imageAfter: ImageSource = {
+	},
+	after: {
 		large: 'https://res.cloudinary.com/lupinemoon/image/upload/v1552116808/dummy-after.jpg',
 		small:
 			'https://res.cloudinary.com/lupinemoon/image/upload/c_limit,h_275/v1552116776/dummy-after.jpg',
 		alt: 'After Image'
+	}
+};
+
+@observer
+class Showcase extends React.Component<ShowcaseProps, State> {
+	public state: State = {
+		isBefore: true
 	};
 
 	public handleGetInTouchClick = (checked: boolean, event: MouseEvent) => {
@@ -44,7 +51,6 @@ class Showcase extends React.Component<ShowcaseProps, State> {
 
 	public render() {
 		const { isBefore } = this.state;
-		const imageSrc: ImageSource = !isBefore ? this.imageAfter : this.imageBefore;
 		return (
 			<section className="Showcase__Main">
 				<section className="Content__Wrapper">
@@ -58,7 +64,17 @@ class Showcase extends React.Component<ShowcaseProps, State> {
 						/>
 					</div>
 					<section className="Showcase__Image__Container">
-						<ImageWrapper className="Showcase__Image" imageSrc={imageSrc} render={true} />
+						<ImageWrapper
+							className={classnames('Showcase__Image', 'Absolute', !isBefore ? 'Hidden' : '')}
+							imageSrc={imageItem.before}
+							render={true}
+						/>
+						<ImageWrapper
+							className={classnames('Showcase__Image', 'Absolute', isBefore ? 'Hidden' : '')}
+							imageSrc={imageItem.after}
+							render={true}
+						/>
+						<img className="Showcase__Image" src={imageItem.before.small} />
 					</section>
 				</section>
 			</section>
