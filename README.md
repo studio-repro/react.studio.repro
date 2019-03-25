@@ -35,7 +35,7 @@ The build is minified and the filenames include the hashes.
 
 ## Docker
 
-This project includes a multi-stage Dockerfile, to build an image you can execute: `docker build . --tag react-studio-repro:1.0`
+This project includes a multi-stage Dockerfile, to build an image you can execute: `docker build . --tag react-studio-repro:1.0`, and then go to: http://localhost:8080/
 
 ## Contribution guidelines
 
