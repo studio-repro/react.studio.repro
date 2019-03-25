@@ -3,8 +3,8 @@ import * as React from 'react';
 import RouterLink from '@components/functional/RouterLink';
 import Grid from '@components/structural/Grid';
 import Nav from '@components/structural/Nav';
-
 import { RouteNames } from '@enums/RouteNames';
+import * as Constants from '@utils/constants';
 
 import { ReactComponent as IconFacebook } from '@assets/images/svg/icon-fb.svg';
 import { ReactComponent as IconTwitter } from '@assets/images/svg/icon-twitter.svg';
@@ -69,7 +69,10 @@ const Footer = () => (
 					</div>
 				</Grid>
 			</div>
-			<div className="Copyright">&copy; Studio Reporo 2019. All rights reserved.</div>
+			<div className="Copyright">
+				&copy; Studio Repro 2019. All rights reserved.
+				<a href={'mailto:' + Constants.infoEmailAddress}> {Constants.infoEmailAddress}</a>
+			</div>
 		</div>
 	</footer>
 );

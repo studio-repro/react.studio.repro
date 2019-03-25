@@ -2,6 +2,7 @@ import { observer } from 'mobx-react';
 import * as React from 'react';
 
 import RoundButton from '@components/ui/RoundButton';
+import * as Constants from '@utils/constants';
 
 import './style.less';
 
@@ -16,7 +17,10 @@ interface State {
 @observer
 class WhoWeAre extends React.Component<WhoWeAreProps, State> {
 	public handleGetInTouchClick = (event: React.MouseEvent) => {
-		event.preventDefault();
+		if (event) {
+			event.preventDefault();
+		}
+		window.location.href = 'mailto:' + Constants.infoEmailAddress;
 	};
 
 	public render() {

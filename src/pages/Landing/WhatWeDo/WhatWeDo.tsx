@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import RoundButton from '@components/ui/RoundButton';
 import RoundIcon from '@components/ui/RoundIcon';
+import * as Constants from '@utils/constants';
 
 import './style.less';
 
@@ -11,7 +12,10 @@ export interface WhatWeDoProps {
 
 class WhatWeDo extends React.Component<WhatWeDoProps> {
 	public handleGetInTouchClick = (event: React.MouseEvent) => {
-		event.preventDefault();
+		if (event) {
+			event.preventDefault();
+		}
+		window.location.href = 'mailto:' + Constants.infoEmailAddress;
 	};
 
 	public render() {

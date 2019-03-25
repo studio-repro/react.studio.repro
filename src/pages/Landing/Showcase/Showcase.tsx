@@ -42,7 +42,7 @@ class Showcase extends React.Component<ShowcaseProps, State> {
 		isBefore: true
 	};
 
-	public handleGetInTouchClick = (checked: boolean, event: MouseEvent) => {
+	public handleToggleClick = (checked: boolean, event: MouseEvent) => {
 		if (event) {
 			event.preventDefault();
 		}
@@ -60,7 +60,7 @@ class Showcase extends React.Component<ShowcaseProps, State> {
 						<Switch
 							checkedChildren="After"
 							unCheckedChildren="Before"
-							onClick={this.handleGetInTouchClick}
+							onClick={this.handleToggleClick}
 						/>
 					</div>
 					<section className="Showcase__Image__Container">
