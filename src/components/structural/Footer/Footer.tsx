@@ -71,7 +71,10 @@ const Footer = () => (
 			</div>
 			<div className="Copyright">
 				&copy; Studio Repro 2019. All rights reserved.
-				<a href={'mailto:' + Constants.infoEmailAddress}> {Constants.infoEmailAddress}</a>
+				<a className="Anchor__Email" href={'mailto:' + Constants.infoEmailAddress}>
+					{' '}
+					{Constants.infoEmailAddress}
+				</a>
 			</div>
 		</div>
 	</footer>
